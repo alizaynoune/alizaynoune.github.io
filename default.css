@@ -1,0 +1,16 @@
+html, body{
+    padding: 0;
+    margin: 0;
+}
+.projects {
+    background-color: aqua;
+    width: 12%;
+    height: 12%;
+}
+
+
+
+
+.tail {
+    position:absolute;
+}
