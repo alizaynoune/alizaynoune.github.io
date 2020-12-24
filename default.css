@@ -14,7 +14,6 @@ html, body{
 .head img{
     height: 5em;
     float: left;
-    background-color: #4CAF50;
 }
 .head h1{
     margin-left: 40px;
@@ -22,38 +21,34 @@ html, body{
 }
 #topnav{
     background-color: #333;
-    height: 5em;
     overflow: hidden;
-   /* border: 3px dashed brown; */
+    height: 45px;
+    /*border: 3px dashed brown;*/ 
 }
-#navlist {
-    list-style-type: none;
-    float: left;
-    height: 100%;
-    width: 100%;
-    margin-top: 0px;
-    margin-left: 0px;
-    margin-bottom: 1px;
-}
-#navlist li {
-    float: left;
 
-    color: white;
-    text-align: center;
-    padding: 17px;
-    font-size: 13px;
-    text-decoration: none;
+#topnav button {
+    background-color: #333;
+    border: none;
+    font-size: 20px;
+    color: #FFFFFF;
+    width: 25%;
+    height: 100%;
+    transition-duration: 1.5s;
+    overflow: hidden;
+    cursor: pointer;
+    float: left;
+    outline: none;
 }
-#navlist li:hover {
+
+#topnav button:hover {
     background-color: black;
+    font-size: 30px;  
 }
-#navlist li.active {
+#topnav button.active {
     background-color: #4CAF50;
     color: white;
 }
-#navlist li.about {
-    float: right;
-}
+
 #page {
     margin: 0px;
     margin: 2px;

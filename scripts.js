@@ -1,5 +1,5 @@
 function    _loop_elem(){
-    var active = $("#navlist").children();
+    var active = $("#topnav").children();
     for (var i = 0; i < active.length; i++){
         $(active[i]).removeClass('active');
     }
@@ -13,6 +13,8 @@ function _onclick(elem){
 }
 
 function        _load_page(elem){
-    //alert($(elem).attr("value"));
-    $('#frame').attr("src", $(elem).attr("value"));
+    var value = $('#frame').attr("src");
+    if (value === "Porojects.html"){
+        alert(value);
+    }
 }
