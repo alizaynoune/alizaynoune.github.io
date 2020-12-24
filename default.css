@@ -1,16 +1,65 @@
 html, body{
     padding: 0;
     margin: 0;
+    background-color: #333;
+    color: white;
+    font-family: 'Source Code Pro', monospace;
 }
-.projects {
-    background-color: aqua;
-    width: 12%;
-    height: 12%;
+.head{
+    overflow: hidden;
+    display: block;
+    text-align: center;
+    background-color: black;
 }
+.head img{
+    height: 5em;
+    float: left;
+    background-color: #4CAF50;
+}
+.head h1{
+    margin-left: 40px;
+    
+}
+#topnav{
+    background-color: #333;
+    height: 5em;
+    overflow: hidden;
+   /* border: 3px dashed brown; */
+}
+#navlist {
+    list-style-type: none;
+    float: left;
+    height: 100%;
+    width: 100%;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 1px;
+}
+#navlist li {
+    float: left;
 
-
-
-
+    color: white;
+    text-align: center;
+    padding: 17px;
+    font-size: 13px;
+    text-decoration: none;
+}
+#navlist li:hover {
+    background-color: black;
+}
+#navlist li.active {
+    background-color: #4CAF50;
+    color: white;
+}
+#navlist li.about {
+    float: right;
+}
+#page {
+    margin: 0px;
+    margin: 2px;
+    border: 3px dashed brown;
+}
 .tail {
     position:absolute;
+    float: right;
 }

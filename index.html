@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="default.css"/>
-    </head>
-    <body>
-        <div class="main-container">
-            <h1>Hi, I'm Ali Zaynoune</h1>
-        </div>
-        <div class="bar_head">
-        </div>
-        <div class="projects">
-            <div class="AI"><h1>AI</h1>
-            <ol>
-                <li>Corewar</li>
-                <li>Lem-in</li>
-                <li>Filler</li>
-                <li>Ft_printf</li>
-            </ol>
-            </div>
-        </div>
-        <div class="about"></div>
-    </body>
-    <tail class="tail">
-        by ali-zaynoune &#169;
-    </tail>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="default.css" />
+    <script src="scripts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="head">
+        <img class="img" src="images/lg.jpg" />
+        <h1>Hi, I'm Ali Zaynoune</h1>
+    </div>
+    <div id="topnav">
+        <ul id="navlist">
+            <li onclick="_onclick(this)" value="" class="active">Home</li>
+            <li onclick="_onclick(this)" value="projets.html">Projects</li>
+            <li onclick="_onclick(this)" value="Contact.html">Contact</li>
+            <li onclick="_onclick(this)" value="about.html">about me</li>
+        </ul>
+    </div>
+    <div id="page">
+        <iframe id="frame" src=""></iframe>
+    </div>
+</body>
+<tail class="tail">
+    by ali-zaynoune &#169;
+</tail>
+
 </html>
