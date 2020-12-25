@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-    $('#page').load('src/Home.php');
+    $('#page').load('src/Home.html');
 });
 
 function    _loop_elem(){

@@ -6,11 +6,55 @@ html, body{
     font-family: 'Source Code Pro', monospace;
 }
 .project{
-    border: 3px dashed brown;
+   /* border: 3px dashed brown;*/
+   border-bottom:1px solid black;
+}
+.project button._desactive{
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: black;
+    transition-duration: 1.5s;
+    overflow: hidden;
+    cursor: pointer;
+    outline: none;
+}
+
+.project button._active {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: white;
+    transition-duration: 1.5s;
+    overflow: hidden;
+    cursor: pointer;
+    outline: none;
+}
+.project button:hover {
+    color: greenyellow;
 }
 .name {
     color: black;
+    text-align: center;
 }
-.descption {
-    
+.show {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 30em;
+    animation: type 4s steps(60, end); 
+ }
+
+ /*set the background colour of div element to black */
+ .wrapper {
+   background-color: black;
+  }
+
+  @keyframes type{ 
+   from { 
+        width: 0; 
+        } 
+}
+
+.hidden {
+    display: none;
 }
