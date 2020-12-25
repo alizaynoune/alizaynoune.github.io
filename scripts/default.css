@@ -42,19 +42,20 @@ html, body{
 
 #topnav button:hover {
     background-color: black;
-    font-size: 30px;  
+    font-size: 25px;  
 }
 #topnav button.active {
     background-color: #4CAF50;
     color: white;
+    font-size: 25px;
 }
 
 #page {
     margin: 0px;
-    margin: 2px;
-    border: 3px dashed brown;
+    display: block;
+    height: auto;
+ /*   border: 3px dashed brown;*/
 }
 .tail {
-    position:absolute;
     float: right;
 }

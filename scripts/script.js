@@ -1,3 +1,7 @@
+$( document ).ready(function() {
+    $('#page').load('src/Home.html');
+});
+
 function    _loop_elem(){
     var active = $("#topnav").children();
     for (var i = 0; i < active.length; i++){
@@ -13,8 +17,5 @@ function _onclick(elem){
 }
 
 function        _load_page(elem){
-    var value = $('#frame').attr("src");
-    if (value === "Porojects.html"){
-        alert(value);
-    }
+    $('#page').load($(elem).attr("value"));
 }
