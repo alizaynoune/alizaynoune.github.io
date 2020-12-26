@@ -12,7 +12,6 @@ function    _loop_elem(){
 function _onclick(elem){
     _loop_elem();
     $(elem).addClass('currpage');
-    var page = $('.page').children();
     _load_page(elem);
 }
 
@@ -21,24 +20,23 @@ function        _load_page(elem){
 }
 
 function        openClose(elem){
-    if ($(elem).attr("value") === "open"){
-        $(elem).attr("value", "close");
-        $(elem).html("&#10005;")
-        openNav();
-    } 
-    else{
-        $(elem).attr("value", "open");
-        $(elem).html("&#9776;");
-        closeNav();
-    }
+    if ($(elem).attr("value") === "open")
+        openNav(elem);
+    else
+        closeNav(elem);
+
 }
 
-function openNav() {
+function openNav(elem) {
     $(".menu").css("width","40%");
     $(".menu").css("margin-left", "60%");
+    $(elem).attr("value", "close");
+    $(elem).html("&#10005;")
   }
   
-  function closeNav() {
+  function closeNav(elem) {
     $(".menu").css("width","0%");
     $(".menu").css("margin-left", "100%");
+    $(elem).attr("value", "open");
+    $(elem).html("&#9776;");
   }

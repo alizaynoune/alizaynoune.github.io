@@ -33,27 +33,24 @@ html, body{
 .project button:hover {
     color: greenyellow;
 }
+
 .name {
     color: black;
     text-align: center;
 }
 .show {
     white-space: nowrap;
-    overflow: hidden;
-    width: 30em;
-    animation: type 4s steps(60, end); 
+    animation: type 4s steps(60, end);
+    position:relative;
+    content: attr(data-text);
  }
 
- /*set the background colour of div element to black */
- .wrapper {
-   background-color: black;
-  }
+  .show::before{
+    content: attr(data);
+    display:block;
 
-  @keyframes type{ 
-   from { 
-        width: 0; 
-        } 
-}
+    border: 3px dashed brown;
+  }
 
 .hidden {
     display: none;

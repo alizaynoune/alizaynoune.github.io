@@ -19,26 +19,30 @@ html, body{
 .head h1{
   margin-left: 40px;
   margin-top: 50px;
+  margin-bottom: 0px;
     
 }
-.head button {
+.closebtn {
   float: right;
-  margin-bottom: 0%;
   height: 40px;
   background: none;
-  color: #818181;
-  color: #818181;  
+  color: #818181; 
   cursor: pointer;
   outline: none;
   border: none;
-  font-size: 30px;
+  font-size: 40px;
+  font-display: center;
+  margin-right: 20px;
+  width: 50px;
+  height: 50px;
 }
 
 
 .page {
     margin: 0px;
     display: block;
-    height: auto;
+    height: 100%;
+    overflow: hidden;
  /*   border: 3px dashed brown;*/
 }
 .tail {
@@ -69,9 +73,8 @@ html, body{
     padding: 15px;
     text-align: center;
     width: 100%;
-    
   }
-  
+
   .menu button:hover{
     color: #f1f1f1;
     font-size: 40px;
@@ -84,10 +87,8 @@ html, body{
     padding: 20px;
   }
   
-  @media screen and (max-height: 450px) {
-    .menu :single-button {font-size: 20px}
-    .menu .closebtn {
-    font-size: 50px;
-    top: 15px;
+  @media only screen and (max-width: 800px){
+    .closebtn{
+      border: 3px dashed brown;
     }
   }
