@@ -19,36 +19,7 @@ html, body{
     margin-left: 40px;
     
 }
-#topnav{
-    background-color: #333;
-    overflow: hidden;
-    height: 45px;
-    /*border: 3px dashed brown;*/ 
-}
 
-#topnav button {
-    background-color: #333;
-    border: none;
-    font-size: 20px;
-    color: #FFFFFF;
-    width: 25%;
-    height: 100%;
-    transition-duration: 1.5s;
-    overflow: hidden;
-    cursor: pointer;
-    float: left;
-    outline: none;
-}
-
-#topnav button:hover {
-    background-color: black;
-    font-size: 25px;  
-}
-#topnav button.active {
-    background-color: #4CAF50;
-    color: white;
-    font-size: 25px;
-}
 
 #page {
     margin: 0px;
@@ -59,3 +30,52 @@ html, body{
 .tail {
     float: right;
 }
+
+
+
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    margin-left: 100%;   
+    top: 5em;
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlay button {
+    font-size: 30px;
+    color: #818181;  
+    transition: 0.5s;
+    cursor: pointer;
+    outline: none;
+    background: none;
+    border: none;
+    display: block;
+  }
+  
+  .overlay button:hover{
+    color: #f1f1f1;
+  }
+  .overlay button:focus{
+      color: #f1f1f1;
+      font-size: 40px;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay :single-button {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 30px;
+    top: 15px;
+    right: 35px;
+    }
+  }

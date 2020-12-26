@@ -19,3 +19,13 @@ function _onclick(elem){
 function        _load_page(elem){
     $('#page').load($(elem).attr("value"));
 }
+
+function openNav() {
+    $("#myNav").css("width","100%");
+    $("#myNav").css("margin-left", "0%");
+  }
+  
+  function closeNav() {
+    $("#myNav").css("width","0%");
+    $("#myNav").css("margin-left", "100%");
+  }

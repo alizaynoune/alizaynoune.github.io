@@ -13,8 +13,10 @@
     <div class="head">
         <img class="img" src="images/lg.jpg" />
         <h1>Hi, I'm Ali Zaynoune</h1>
+        <button  onclick="openNav()">&#9776; open</button>
     </div>
-    <div id="topnav">
+    <div  id="myNav" class="overlay">
+        <button class="closebtn" onclick="closeNav()">&times;</button>
         <button onclick="_onclick(this)" value="src/Home.html" class="active">Home</button>
         <button onclick="_onclick(this)" value="src/Projects.html">Projects</button>
         <button onclick="_onclick(this)" value="src/Contact.html">Contact</button>
