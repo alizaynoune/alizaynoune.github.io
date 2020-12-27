@@ -1,0 +1,114 @@
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #333;
+  color: white;
+  font-family: 'Source Code Pro', monospace;
+}
+
+#particles {
+  overflow: hidden;
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+}
+
+#intro {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+}
+
+.head{
+    overflow: hidden;
+    display: block;
+    text-align: center;
+    height: 10em;
+    
+
+}
+.img{
+    height: 10em;
+    position: absolute;
+    top: 1%;
+    left: 1%;
+}
+.head h1{
+  margin-left: 40px;
+  margin-top: 50px;
+
+    
+}
+.closebtn {
+  background: none;
+  color: #818181; 
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 40px;
+  font-display: center;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 1%;
+  top: 40px;
+}
+
+.menu {
+  overflow: hidden;
+  height: 0%;
+  width: 0%;
+  position: absolute;
+  right: 0%;  
+  top: 90px;
+  background-color: rgba(0,0,0, 0.3);
+  overflow-x: hidden;
+  transition: 0.5s;
+  display: block;
+ 
+}
+
+.menu button{
+  display: none;
+  
+  font-size: 30px;
+  color: #818181;  
+  cursor: pointer;
+  outline: none;
+  background: none;
+  border: none;
+  transition: 0.5s;
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+.menu button:hover{
+  color: #f1f1f1;
+  font-size: 40px;
+}
+.menu .currpage{
+    color: #f1f1f1;
+    font-size: 40px;
+}
+.nulldiv {
+  padding: 20px;
+}
+.page {
+  margin-top: 30px;
+  display: block;
+  height: 100%;
+  overflow: hidden;
+    
+}
+.tail {
+  position: absolute;
+  right: 0%;
+  bottom: 0%;
+  width: 100%;
+  text-align: right;
+}

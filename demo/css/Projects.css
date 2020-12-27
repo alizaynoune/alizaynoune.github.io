@@ -24,7 +24,7 @@ html, body{
     background: none;
     border: none;
     font-size: 20px;
-    color: white;
+    color: greenyellow;
     transition-duration: 1.5s;
     overflow: hidden;
     cursor: pointer;
