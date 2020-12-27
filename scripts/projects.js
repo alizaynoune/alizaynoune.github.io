@@ -12,12 +12,19 @@ function        toggle_desc(elem){
         $(elem).html("description &#9662;");
         $(elem).next().attr("class", "hidden");
     }
-    if ($(elem).next().attr("data") === "")
-        _read_file($(elem).next());
+    var list = $(elem).next();
+    if ($(list).children().length == 0)
+        _read_file(list);
 }
 
 function            _read_file(elem){
-    $(elem).load($(elem).attr("file_name"));
+    jQuery.get($(elem).attr("file_name"), function(data){
+        var lines = data.split("\n");
+        for (var i = 0; i < lines.length; i++){
+            var new_elem = ["<li class=\"line\">",lines[i], "</li>"];
+            $($(elem).append(new_elem));
+        }
+    });
 }
 
 function            _closse_all(){

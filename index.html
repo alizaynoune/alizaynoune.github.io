@@ -1,1 +1,39 @@
-demo/index.html
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Ali Zaynoune</title>
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <script type='text/javascript' src='js/jquery.particleground.js'></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type='text/javascript' src='js/demo.js'></script>
+  <link rel="stylesheet" type="text/css" href="css/default.css" />
+  <script src="scripts/script.js"></script>
+</head>
+
+<body>
+  <div id="particles">
+    <div id="intro">
+      <a href="index.html"><img class="img" src="images/lg.jpg"></a>
+      <div class="head">
+        <h1 class="page_open">Home</h1>
+        <button class="closebtn" value="open" onclick="openClose(this)">&#9776;</button>
+      </div>
+      <div class="menu">
+        <div class="nulldiv"></div>
+        <button class="currpage" onclick="_onclick(this)" value="src/Home.html" class="active">Home</button>
+        <button onclick="_onclick(this)" value="src/Projects.html">Projects</button>
+        <button onclick="_onclick(this)" value="src/Contact.html">Contact</button>
+        <button onclick="_onclick(this)" value="src/About.html">about me</button>
+      </div>
+      <div class="page">
+      </div>
+    </div>
+  </div>
+</body>
+<tail class="tail">
+  by ali-zaynoune &#169;
+</tail>
+
+</html>

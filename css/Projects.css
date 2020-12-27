@@ -15,9 +15,9 @@ html, body{
     font-size: 20px;
     color: black;
     transition-duration: 1.5s;
-    overflow: hidden;
     cursor: pointer;
     outline: none;
+
 }
 
 .project button._active {
@@ -26,7 +26,6 @@ html, body{
     font-size: 20px;
     color: greenyellow;
     transition-duration: 1.5s;
-    overflow: hidden;
     cursor: pointer;
     outline: none;
 }
@@ -37,6 +36,7 @@ html, body{
 .name {
     color: black;
     text-align: center;
+    
 }
 .show {
     white-space: nowrap;
@@ -48,10 +48,11 @@ html, body{
   .show::before{
     content: attr(data);
     display:block;
-
-    border: 3px dashed brown;
   }
 
 .hidden {
     display: none;
+}
+.line {
+    list-style: none;
 }
