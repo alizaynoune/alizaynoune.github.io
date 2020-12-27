@@ -10,7 +10,7 @@ $( document ).ready(function() {
 
 function    _loop_elem(){
     var active = $(".menu").children();
-    for (var i = 0; i < active.length; i++){
+    for (var i = 0; i < active.length - 1; i++){
         $(active[i]).removeClass('currpage');
     }
 }
