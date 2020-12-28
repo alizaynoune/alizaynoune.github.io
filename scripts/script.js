@@ -10,7 +10,7 @@ $( document ).ready(function() {
 
 function    _loop_elem(){
     var active = $(".menu").children();
-    for (var i = 0; i < active.length - 1; i++){
+    for (var i = 0; i < active.length; i++){
         $(active[i]).removeClass('currpage');
     }
 }
@@ -35,7 +35,11 @@ function        openClose(elem){
 }
 
 function openNav(elem) {
-    $(".menu").css("width","35%");
+    if ($(window).width() < 800){
+        $(".menu").css("width","70%");
+    }
+    else
+        $(".menu").css("width","35%");
     $(".menu").css("height", "100%");
     $(elem).attr("value", "close");
     $(elem).html("&#10005;")

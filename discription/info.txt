@@ -1,10 +1,10 @@
-Corewar.txt
-fdf.txt
-filler.txt
-fillit.txt
-ft_dprintf.txt
-ft_ls.txt
-lem_in.txt
-libft.txt
-piscine_php.txt
-sudoku.txt
+Corewar.txt https://github.com/alizaynoune/Corewar
+fdf.txt https://github.com/alizaynoune/FdF
+filler.txt https://github.com/alizaynoune/filler
+fillit.txt https://github.com/alizaynoune/fillit
+ft_dprintf.txt https://github.com/alizaynoune/ft_dprintf
+ft_ls.txt https://github.com/alizaynoune/ft_ls
+lem_in.txt https://github.com/alizaynoune/lem_in
+libft.txt https://github.com/alizaynoune/libft
+piscine_php.txt https://github.com/alizaynoune/Piscine_PHP
+sudoku.txt https://github.com/alizaynoune/sudoku

@@ -5,9 +5,37 @@ html, body{
     color: white;
     font-family: 'Source Code Pro', monospace;
 }
+.all_project {
+    padding: 10px;
+}
 .project{
-   /* border: 3px dashed brown;*/
-   border-bottom:1px solid black;
+    /*border: 3px dashed brown;
+   */
+    border-bottom:1px solid black;
+    text-align: center;
+    padding: 30px;
+}
+
+.project h2{
+    margin-top: -2%;
+    /*border: lavender 3px dashed;
+    */
+}
+.link_repo{
+    margin-left: 30%;
+    font-size: 20px;
+    color: crimson;
+    text-decoration: none;
+}
+a:visited{
+    color: cyan;
+}
+a:hover{
+    color: chartreuse;
+
+}
+a:active{
+    color: chartreuse;
 }
 .project button._desactive{
     background: none;
@@ -17,6 +45,7 @@ html, body{
     transition-duration: 1.5s;
     cursor: pointer;
     outline: none;
+   
 
 }
 
@@ -43,6 +72,7 @@ html, body{
     animation: type 4s steps(60, end);
     position:relative;
     content: attr(data-text);
+    text-align: left;
  }
 
   .show::before{
@@ -53,6 +83,11 @@ html, body{
 .hidden {
     display: none;
 }
+
 .line {
     list-style: none;
+    border: orangered 3px dashed;
+
+    column-width: 100px;
+    
 }
