@@ -36,10 +36,10 @@ function        openClose(elem){
 
 function openNav(elem) {
     if ($(window).width() < 800){
-        $(".menu").css("width","70%");
+        $(".menu").css("width","40%");
     }
     else
-        $(".menu").css("width","35%");
+        $(".menu").css("width","40%");
     $(".menu").css("height", "100%");
     $(elem).attr("value", "close");
     $(elem).html("&#10005;")
