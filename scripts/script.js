@@ -1,11 +1,5 @@
 $( document ).ready(function() {
     $('.page').load('src/Home.html');
-    $(document).click(function(e){
-        var targ = e.target.className;
-        if (targ !== "closebtn" && targ !== "menu" && targ !== "currpage"){
-            closeNav($(".closebtn"));
-        }
-    });
 });
 
 function    _loop_elem(){
@@ -27,7 +21,8 @@ function        _load_page(elem){
 }
 
 function        openClose(elem){
-    if ($(elem).attr("value") === "open")
+    
+    if ($(elem).attr("class") === "menuopen")
         openNav(elem);
     else
         closeNav(elem);
@@ -35,21 +30,15 @@ function        openClose(elem){
 }
 
 function openNav(elem) {
-    if ($(window).width() < 800){
-        $(".menu").css("width","40%");
-    }
-    else
-        $(".menu").css("width","40%");
+    $(".menu").css("width","40%");
     $(".menu").css("height", "100%");
-    $(elem).attr("value", "close");
-    $(elem).html("&#10005;")
+    $(elem).attr("class", "menuclose");
     $(".menu").find('button').css("display", "block");
   }
   
   function closeNav(elem) {
     $(".menu").css("width", "0%");
     $(".menu").css("height", "0%");
-    $(elem).attr("value", "open");
-    $(elem).html("&#9776;");
+    $(elem).attr("class", "menuopen");
     $(".menu").find('button').css("display", "none");
   }
