@@ -62,8 +62,11 @@ html, body {
   margin-top: 5px;
 }
 
-.closebtn #line1{
+.menuclose div{
   transform: rotate(-45deg) translate(-5px, 6px);
+  width: 100%;
+  height: 16%;
+  margin-top: 5px;
 }
 
 .menu {
