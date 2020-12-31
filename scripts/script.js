@@ -1,44 +1,38 @@
-$( document ).ready(function() {
-    $('.page').load('src/Home.html');
+$(document).ready(function () {
+    $('.pageContent').load('src/Home.html');
+    $(window).scroll(function() {
+
+        
+            console.log("done");
+       
+    
+    });
+
 });
 
-function    _loop_elem(){
-    var active = $(".menu").children();
-    for (var i = 0; i < active.length; i++){
-        $(active[i]).removeClass('currpage');
-    }
-}
 
-function _onclick(elem){
-    _loop_elem();
-    $(elem).addClass('currpage');
-    _load_page(elem);
-}
+function openPage() {
+    // $(".pageContent").load($(elem).attr("value"));
+    // $(".currPage").each(function () {
+    //     $(this).removeClass("currPage");
+    // });
+    // $(elem).addClass("currPage");
 
-function        _load_page(elem){
-    $(".page").load($(elem).attr("value"));
-    $(".page_open").html($(elem).html());
-}
 
-function        openClose(elem){
-    
-    if ($(elem).attr("class") === "menuopen")
-        openNav(elem);
-    else
-        closeNav(elem);
+        var head = document.createElement('h1')
+        head.innerHTML = 'this is contact page'
+        content = $('.pageContent');
+        content.innerHTML = ''
+        console.log(content);
+        content.append(head);
+        isempty = 0;
+
 
 }
 
-function openNav(elem) {
-    $(".menu").css("width","40%");
-    $(".menu").css("height", "100%");
-    $(elem).attr("class", "menuclose");
-    $(".menu").find('button').css("display", "block");
-  }
-  
-  function closeNav(elem) {
-    $(".menu").css("width", "0%");
-    $(".menu").css("height", "0%");
-    $(elem).attr("class", "menuopen");
-    $(".menu").find('button').css("display", "none");
-  }
+
+document.onscroll = function () {
+    console.log('scroll')
+}
+
+

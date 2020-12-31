@@ -1,3 +1,5 @@
+@import "Projects.css";
+
 
 html, body {
   width: 100%;
@@ -5,6 +7,7 @@ html, body {
   overflow: hidden;
   background-color: #333;
   color: white;
+  font-style: oblique;
 }
 
 #particles {
@@ -32,8 +35,9 @@ html, body {
   border: dashed 1px green;
   display: inline-flex;
   height: 15%;
-  width: 100%;
+  max-height: 150px;
   min-height: 95px;
+  width: 100%;
   right: 0%;
   top: 0%;
   
@@ -50,33 +54,85 @@ html, body {
   border: deeppink dashed 1px;
 }
 
+.currPage {
+  color: black;
+  
+}
+
 .navLinks {
-  border: aqua dashed 1px;
-  width: 90%;
   
   display: flex;
-  height: 50px;
-  margin-top: 46px;
   justify-content: space-around;
-  text-align:end; 
+  width: 90%; 
+  height: 50px;
+  margin: auto;
+  margin-bottom: 0%;
 }
 
 .navLinks li {
-  display: flex;
-  width: 100%;
+  justify-content: space-around;
   text-align: center;
   list-style: none;
   font-size: 28px;
-  font-style: oblique;
   font-weight:bold;
   cursor: pointer;
-  border: oldlace dashed 1px;
-  
+  width: 100%;
+  color: #FFF;
+  transition: all 0.3s;
+  position: relative;
 }
+  
+
+  
+
+.navLinks li::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(255,255,255,0.5);
+  border-bottom-color: rgba(255,255,255,0.5);
+  transform: scale(0.1, 1);
+}
+.navLinks li:hover {
+  letter-spacing: 2px;
+}
+.navLinks li:hover::before {
+  opacity: 1; 
+  transform: scale(1, 1); 
+}
+.navLinks li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background-color: rgba(255,255,255,0.1);
+}
+.navLinks li:hover::after {
+  opacity: 0; 
+  transform: scale(0.1, 1);
+}
+
+.currPage {
+  background-color:rgba(0, 0, 0, 0.5);
+}
+
 
 .menuBtn{
 
-  background-color: deepskyblue;
   height: 30px;
   width: 20px;
   display: none;
@@ -97,24 +153,34 @@ html, body {
   margin-top: 1%;
 }
 
+
+
 /* mobile screen*/
-@media screen and (max-width: 600px){
+@media screen and (max-width: 900px){
   .navBar {
     background-color: darkgoldenrod;
+    display: block;
+  }
+  .menuBtn {
+    position: absolute;
+    right: 2%;
+    top: 0%;
+    display: inline-flex;
   }
   .navLinks {
+    background-color: #333;
     display: block;
     position: absolute;
     right: 0%;
-    top: 9%;
     height: 100%;
     width: 50%;
-    background-color: black;
+    
   }
   .navLinks li {
     padding: 10%;
+  
     text-justify:distribute-all-lines;
-    text-align: right;
+    
   }
 }
 

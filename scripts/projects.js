@@ -12,7 +12,7 @@ $(document).ready(function(){
             "<a class=\"link_repo\" href=\""+sp_space[1]+"\">source code</a>"+
             "<div class=\"hidden\" file_name=\""+"discription/"
             +sp_space[0]+"\"></div></div>";
-        $($(".all_project").append(_new));
+            $(".all_project").append(_new);
         }
     });
 });
