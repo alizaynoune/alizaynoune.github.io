@@ -15,6 +15,13 @@ $(document).ready(function(){
             $(".all_project").append(_new);
         }
     });
+    $(window).scroll(function() {
+
+        
+        console.log("done");
+   
+
+});
 });
 
 function        break_line(line){
