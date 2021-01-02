@@ -1,0 +1,186 @@
+@import "Projects.css";
+
+html, body {
+    color: whitesmoke;
+    font-style: oblique;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+    color: white;
+    border: indigo dashed 3px;
+  }
+  *{
+    margin: 0%;
+    padding: 0%;
+    scroll-behavior: auto;
+    box-sizing: border-box;
+  }
+  #particles {
+    display: flex;
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+  }
+  
+  #intro {
+    position: fixed;
+    overflow: auto;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  
+  .navBar {
+    border: dashed 1px green;
+    display: block;
+    text-align: center;
+    height: 15%;
+    max-height: 150px;
+    min-height: 95px;
+    width: 100%;
+    right: 0%;
+    top: 0%;
+  }
+  
+  .navBar h1{
+    color: aqua;
+    display: none;
+    /*remove it*/
+  }
+  .navBar img , a{
+    height: 100%;
+    border: deeppink dashed 1px;
+  }
+  
+  .navLinks {
+    
+    display: none;
+    justify-content: space-around;
+    width: 90%; 
+    height: 50px;
+    margin: auto;
+    margin-bottom: 0%;
+    transition: all 0.5s;
+  }
+  
+  
+  .navLinks li {
+    justify-content: space-around;
+    text-align: center;
+    list-style: none;
+    font-size: 28px;
+    font-weight:bold;
+    cursor: pointer;
+    width: 100%;
+    color: #FFF;
+    transition: all 0.3s;
+    position: relative;
+  }
+    
+  
+    
+  
+  .navLinks li::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.5s;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgba(255,255,255,0.5);
+    border-bottom-color: rgba(255,255,255,0.5);
+    transform: scale(1, 1);
+  }
+  .navLinks li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.5s;
+    background-color: rgba(255,255,255,0.1);
+  }
+  .navLinks li:hover::after {
+    opacity: 0; 
+    transform: scale(0.1, 1);
+  }
+  
+  .currPage {
+    background-color:rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    border-bottom-style: solid;
+    border-top-color: rgba(255,255,255,0.5);
+    border-bottom-color: rgba(255,255,255,0.5);
+
+  }
+  
+  
+  .menuBtn{
+  
+    height: 80px;
+    width: 80px;
+    position: fixed;
+    cursor: pointer;
+    right: 5%;
+    top: 2%;
+    transition: all 0.5s ease;
+    border: olive 1px dashed;
+  }
+  .menuBtn div{
+      height: 10%;
+      width: 100%;
+      background-color: azure;
+      margin: 20%;
+      /* transform: rotate(45deg); */
+      /* border: blue 1px dashed; */
+      
+  }
+
+  .menuBtn div[id='line1'] {
+    display: none;
+
+    transform: rotate(45deg); 
+
+   
+   
+  }
+  .menuBtn div[id='line2'] {
+    opacity: 0;
+    display: none;
+  }
+  .menuBtn div[id='line3'] {
+
+    
+    transform: rotate(-45deg);
+    padding: 0%;
+
+   
+  }
+  
+  .pageContent { 
+    border: blue 2px dashed;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  footer {
+    position: fixed;
+    bottom: 1%;
+    right: 3%;
+    text-align: center;
+    background: none;
+  }

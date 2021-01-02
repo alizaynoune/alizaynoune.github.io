@@ -12,8 +12,12 @@ $(document).ready(function(){
             <div class=\"hidden\" file_name=\"discription/${sp_space[0]}\">
             </div></div>`;
             $(".all_project").append(_new);
+            $(".all_project").append(_new);
+
         }
     });
+
+
 });
 
 function        break_line(line){
@@ -59,7 +63,7 @@ function            _read_file(elem){
     jQuery.get($(elem).attr("file_name"), function(data){
         var lines = data.split("\n");
         for (var i = 0; i < lines.length - 1; i++){
-            var new_elem = "<p class=\"line\">"+lines[i]+"</p>";
+            var new_elem = "<p class=\"lines\">"+lines[i]+"</p>";
             new_elem = break_line(new_elem);///
             $($(elem).append(new_elem));
         }

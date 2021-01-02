@@ -4,14 +4,19 @@
 html, body {
   color: whitesmoke;
   font-style: oblique;
-  display: block;
   height: 100%;
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+    margin: 0;
+    background-color: #333;
+    color: white;
   border: indigo dashed 3px;
 }
 *{
   margin: 0%;
   padding: 0%;
-  overflow: hidden;
+  scroll-behavior: auto;
   box-sizing: border-box;
 }
 #particles {
@@ -23,15 +28,12 @@ html, body {
 }
 
 #intro {
-  position:absolute;
-  overflow: scroll;
+  position: fixed;
+  overflow: auto;
+  overflow-x: hidden;
   width: 100%;
   height: 100%;
-  top: 0%;
-  left: 0%;
-  right: 0%;
-  margin: 0%;
-  display: inline;
+  display: block;
 }
 
 .navBar {
@@ -43,9 +45,6 @@ html, body {
   width: 100%;
   right: 0%;
   top: 0%;
-  
-
- 
 }
 
 .navBar h1{
@@ -57,11 +56,6 @@ html, body {
   border: deeppink dashed 1px;
 }
 
-.currPage {
-  color: black;
-  
-}
-
 .navLinks {
   
   display: flex;
@@ -70,15 +64,19 @@ html, body {
   height: 50px;
   margin: auto;
   margin-bottom: 0%;
+  transition: all 0.5s;
 }
 
 .ScrollNavLinks {
   position:fixed;
   top: 0%;
+  right: 0%;
+  margin: 0%;
+  width: 100%;
   justify-content: space-around;
-  
   height: 40px;
   background-color: #333;
+  transition: all 0.5s;
 }
 
 .navLinks li {
@@ -153,8 +151,9 @@ html, body {
 .pageContent {
   
   border: blue 2px dashed;
-  width: auto;
+  width: 100%;
   height: auto;
+  overflow: hidden;
 }
 footer {
   position: fixed;
@@ -165,35 +164,6 @@ footer {
 }
 
 
-
-/* mobile screen*/
-@media screen and (max-width: 600px){
-  .navBar {
-    background-color: darkgoldenrod;
-    display: block;
-  }
-  .menuBtn {
-    position: absolute;
-    right: 2%;
-    top: 0%;
-    display: inline-flex;
-  }
-  .navLinks {
-    background-color: #333;
-    display: block;
-    position: absolute;
-    right: 0%;
-    height: 100%;
-    width: 50%;
-    
-  }
-  .navLinks li {
-    padding: 10%;
-  
-    text-justify:distribute-all-lines;
-    
-  }
-}
 
 
 
