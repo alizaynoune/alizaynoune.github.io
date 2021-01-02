@@ -5,23 +5,15 @@ $(document).ready(function(){
         for (var i = 0; i < line.length - 1; i++){
             var sp_space = line[i].split(" ")
             var _file_name = sp_space[0].split(".")
-            var _new = "<div class=\"project\">"+"<h2 class=\"name\">"+
-            _file_name[0]+"</h2>"+"<button onclick=\"toggle_desc(this)\" "+
-            
-            "class=\"_desactive\">descrition &#9662;</button>"+
-            "<a class=\"link_repo\" href=\""+sp_space[1]+"\">source code</a>"+
-            "<div class=\"hidden\" file_name=\""+"discription/"
-            +sp_space[0]+"\"></div></div>";
+            var _new = `<div class=\"project\"><h2 class=\"name\">
+            ${_file_name[0]}</h2><button onclick=\"toggle_desc(this)
+            \"class=\"_desactive\">descrition &#9662;</button>
+            <a class=\"link_repo\" href=\"${sp_space[1]}\">source code</a>
+            <div class=\"hidden\" file_name=\"discription/${sp_space[0]}\">
+            </div></div>`;
             $(".all_project").append(_new);
         }
     });
-    $(window).scroll(function() {
-
-        
-        console.log("done");
-   
-
-});
 });
 
 function        break_line(line){
