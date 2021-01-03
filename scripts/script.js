@@ -6,7 +6,9 @@ $(document).ready(function () {
            $('.navLinks').addClass('ScrollNavLinks');
         else 
             $('.ScrollNavLinks').removeClass('ScrollNavLinks');
-       
+       $('#intro').mouseup(function(e){
+           console.log(e);
+       });
 
     });
 
@@ -30,5 +32,16 @@ function openPage(elem) {
 
 }
 
+function    clickbtn(){
+    $('.menuBtn').toggleClass('btnClose');
+    $('.navLinks').toggleClass('toggleNavLinks');
+    var allChild = $('.navLinks').children();
+    if ($('.btnClose').length > 0){
+        allChild.each(function(index, elem){
+            $(elem).css('transition', `all ease ${index / 2}s`);
+        });
+    }
+    
+}
 
 

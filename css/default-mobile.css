@@ -38,13 +38,15 @@ html, body {
   .navBar {
     border: dashed 1px green;
     display: block;
+    position: fixed;
     text-align: center;
-    height: 15%;
-    max-height: 150px;
-    min-height: 95px;
+    height: 20%;
+    max-height: 130px;
+    min-height: 80px;
     width: 100%;
     right: 0%;
     top: 0%;
+    /* background-color: #333; */
   }
   
   .navBar h1{
@@ -58,34 +60,35 @@ html, body {
   }
   
   .navLinks {
-    
-    display: none;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
     justify-content: space-around;
-    width: 90%; 
-    height: 50px;
-    margin: auto;
-    margin-bottom: 0%;
-    transition: all 0.5s;
+    width: 50%;
+    height: 50%; 
+    right: 0%;
+    transform: translateX(100%);
+    /* transition: all 0.5s; */
+    align-items: center;
+    /* background-color: #333; */
   }
   
   
   .navLinks li {
-    justify-content: space-around;
-    text-align: center;
     list-style: none;
     font-size: 28px;
     font-weight:bold;
     cursor: pointer;
     width: 100%;
+    height: 60px;
     color: #FFF;
-    transition: all 0.3s;
+    transform: translateX(100%);
+    
+    /* transition: all 0.3s; */
     position: relative;
   }
-    
-  
-    
-  
-  .navLinks li::before {
+
+  /* .navLinks li::before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -102,7 +105,7 @@ html, body {
     border-top-color: rgba(255,255,255,0.5);
     border-bottom-color: rgba(255,255,255,0.5);
     transform: scale(1, 1);
-  }
+  } */
   .navLinks li::after {
     content: '';
     position: absolute;
@@ -114,10 +117,10 @@ html, body {
     transition: all 0.5s;
     background-color: rgba(255,255,255,0.1);
   }
-  .navLinks li:hover::after {
+  /* .navLinks li:hover::after {
     opacity: 0; 
     transform: scale(0.1, 1);
-  }
+  } */
   
   .currPage {
     background-color:rgba(0, 0, 0, 0.5);
@@ -135,46 +138,48 @@ html, body {
     width: 80px;
     position: fixed;
     cursor: pointer;
-    right: 5%;
+    right: 3%;
     top: 2%;
-    transition: all 0.5s ease;
+    display: block;
     border: olive 1px dashed;
   }
   .menuBtn div{
-      height: 10%;
+      height: 10px;
       width: 100%;
       background-color: azure;
-      margin: 20%;
-      /* transform: rotate(45deg); */
-      /* border: blue 1px dashed; */
-      
+      margin-top: 12px;
+      transition: all 0.5s;
   }
 
-  .menuBtn div[id='line1'] {
-    display: none;
-
-    transform: rotate(45deg); 
-
-   
-   
-  }
-  .menuBtn div[id='line2'] {
-    opacity: 0;
-    display: none;
-  }
-  .menuBtn div[id='line3'] {
-
+  .btnClose [id='line1'] {
+    transform: rotate(-45deg) translate(-20px,10px);
+    width: 90px;
+    /* background-color: aqua; */
     
-    transform: rotate(-45deg);
-    padding: 0%;
+  }
+  .btnClose [id='line2'] {
+    opacity: 0;
+    background: none;
+  }
+  .btnClose [id='line3'] {
+    transform: rotate(45deg) translate(-20px,-10px);
+    width: 90px;
 
    
+  }
+
+  .toggleNavLinks{
+    transform: translateX(0%);
+  }
+  .toggleNavLinks li{
+    transform: translateX(0%);
   }
   
   .pageContent { 
     border: blue 2px dashed;
     width: 100%;
     height: auto;
+    margin-top: 15%;
     overflow: hidden;
   }
   footer {
