@@ -40,9 +40,7 @@ html, body {
     display: block;
     position: fixed;
     text-align: center;
-    height: 20%;
-    max-height: 130px;
-    min-height: 80px;
+    height:  150px;
     width: 100%;
     right: 0%;
     top: 0%;
@@ -68,9 +66,9 @@ html, body {
     height: 50%; 
     right: 0%;
     transform: translateX(100%);
-    /* transition: all 0.5s; */
     align-items: center;
-    /* background-color: #333; */
+    background-color: #333;
+    transition: all 0.4s;
   }
   
   
@@ -83,29 +81,10 @@ html, body {
     height: 60px;
     color: #FFF;
     transform: translateX(100%);
+    /* transform: translateY(100%); */
     
-    /* transition: all 0.3s; */
-    position: relative;
   }
 
-  /* .navLinks li::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    opacity: 0;
-    transition: all 0.5s;
-    border-top-width: 1px;
-    border-bottom-width: 1px;
-    border-top-style: solid;
-    border-bottom-style: solid;
-    border-top-color: rgba(255,255,255,0.5);
-    border-bottom-color: rgba(255,255,255,0.5);
-    transform: scale(1, 1);
-  } */
   .navLinks li::after {
     content: '';
     position: absolute;
@@ -117,16 +96,12 @@ html, body {
     transition: all 0.5s;
     background-color: rgba(255,255,255,0.1);
   }
-  /* .navLinks li:hover::after {
-    opacity: 0; 
-    transform: scale(0.1, 1);
-  } */
   
   .currPage {
     background-color:rgba(0, 0, 0, 0.5);
     opacity: 1;
     border-bottom-style: solid;
-    border-top-color: rgba(255,255,255,0.5);
+    letter-spacing: 5px;
     border-bottom-color: rgba(255,255,255,0.5);
 
   }
@@ -170,16 +145,18 @@ html, body {
 
   .toggleNavLinks{
     transform: translateX(0%);
+    transition: all 0.5s;
   }
   .toggleNavLinks li{
     transform: translateX(0%);
+    /* transform: translateY(0%); */
   }
   
   .pageContent { 
     border: blue 2px dashed;
     width: 100%;
     height: auto;
-    margin-top: 15%;
+    margin-top: 150px;
     overflow: hidden;
   }
   footer {

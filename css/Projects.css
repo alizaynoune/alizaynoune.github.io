@@ -12,6 +12,7 @@
 
 .project h2{
     margin-top: -2%;
+    transition: all 0.3s;
     /*border: lavender 3px dashed;
     */
 }
@@ -31,57 +32,78 @@ a:hover{
 a:active{
     color: chartreuse;
 }
-.project button._desactive{
-    background: none;
-    border: none;
-    font-size: 20px;
-    color: black;
-    transition-duration: 1.5s;
-    cursor: pointer;
-    outline: none;
-   
 
-}
-
-.project button._active {
-    background: none;
-    border: none;
-    font-size: 20px;
-    color: greenyellow;
-    transition-duration: 1.5s;
+.project span {
+    justify-content: space-around;
+    text-align: center;
+    list-style: none;
+    font-size: 28px;
+    font-weight:bold;
     cursor: pointer;
-    outline: none;
-}
-.project button:hover {
-    color: greenyellow;
-}
+    color: #FFF;
+    transition: all 0.3s;
+    position: relative;
+    display: inline-flex;
+  }
+
+  .project span::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgba(255,255,255,0.5);
+    border-bottom-color: rgba(255,255,255,0.5);
+    transform: scale(0.1, 1);
+  }
+  .project span:hover {
+    letter-spacing: 2px;
+  }
+  .project span:hover::before {
+    opacity: 1; 
+    transform: scale(1, 1); 
+  }
+  .project span::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+    background-color: rgba(255,255,255,0.1);
+  }
+  .project span:hover::after {
+    opacity: 0; 
+    transform: scale(0.1, 1);
+  }
 
 .name {
     color: black;
     text-align: center;
     
 }
-.show {
-    white-space: nowrap;
-    animation: type 4s steps(60, end);
-    position:relative;
-    content: attr(data-text);
-    text-align: left;
- }
 
-  .show::before{
-    content: attr(data);
-    display:block;
-  }
-
-.hidden {
-    display: none;
+.show span {
+    background-color:rgba(0, 0, 0, 0.9);
+    opacity: 1;
+    border-bottom-style: solid;
+    letter-spacing: 2px;
+    border-bottom-color: rgba(255,255,255,0.5);
+    transform: rotate(180deg);
 }
 
-.lines {
-    list-style: none;
-    border: orangered 3px dashed;
-
-    column-width: 100px;
-    
+.show h2 {
+    transform: rotateY(180deg);
+    transition: all 0.3s;
 }
+
