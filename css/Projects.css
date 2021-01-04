@@ -90,6 +90,7 @@ a:active{
 .name {
     color: black;
     text-align: center;
+   
     
 }
 
@@ -105,5 +106,6 @@ a:active{
 .show h2 {
     transform: rotateY(180deg);
     transition: all 0.3s;
+    cursor: hand;
 }
 

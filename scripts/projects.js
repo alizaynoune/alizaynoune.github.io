@@ -1,9 +1,7 @@
 
 function readFile() {
-    var elem = $('.project > .discription');
-    for (var i = 0; i < elem.length; i++) {
-        
-    }
+    var elem = $('.discription');
+    console.log($(elem[0]));
 }
 
 $(document).ready(function () {
@@ -15,7 +13,7 @@ $(document).ready(function () {
                 var _new = `<div class=\"project\"><h2 class=\"name\">${_file_name[0]}</h2>
             <span onclick=\"toggleDesc(this)\"class=\"_desactive\">descrition</span>
             <a class=\"link_repo\" href=\"${sp_space[1]}\">source code</a>
-            <textarea class=\"discription\" placeholder=\"${sp_space[0]}\">lsjdskljlasj</textarea>
+            <div class=\"discription$\" name=\"discription/${sp_space[0]}\"></div>
             </div>`;
                 $(".all_project").append(_new);
                // console.log(length);
@@ -26,7 +24,6 @@ $(document).ready(function () {
 })
 
 function toggleDesc(elem) {
-    var classPar = $(elem).parent().attr("class");
     $(elem).parent().toggleClass('show');
 
 }
