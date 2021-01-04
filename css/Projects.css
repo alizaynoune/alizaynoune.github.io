@@ -10,12 +10,6 @@
     padding: 30px;
 }
 
-.project h2{
-    margin-top: -2%;
-    transition: all 0.3s;
-    /*border: lavender 3px dashed;
-    */
-}
 .link_repo{
     margin-left: 30%;
     font-size: 20px;
@@ -83,29 +77,74 @@ a:active{
     background-color: rgba(255,255,255,0.1);
   }
   .project span:hover::after {
-    opacity: 0; 
+    opacity: 0;
     transform: scale(0.1, 1);
   }
 
 .name {
-    color: black;
+    color: white;
     text-align: center;
-   
-    
+    font-size: 30px;
+    width: 10%;
+    border: olive dashed;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -2%;
 }
-
-.show span {
-    background-color:rgba(0, 0, 0, 0.9);
-    opacity: 1;
-    border-bottom-style: solid;
-    letter-spacing: 2px;
-    border-bottom-color: rgba(255,255,255,0.5);
-    transform: rotate(180deg);
+.hidenDesc{
+  display: none;
+}
+.showDesc{
+  display: inline;
+}
+.showDesc p {
+  text-align: left;
+  white-space: nowrap;
+    animation: type 4s steps(60, end);
+    position:relative;
+    content: attr(data-text);
 }
 
 .show h2 {
-    transform: rotateY(180deg);
-    transition: all 0.3s;
-    cursor: hand;
+  position: relative;
+  background: none;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 85%;
+  animation: animate_h2 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  
+}
+
+
+@keyframes animate_h2 {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+
+.show span{
+  background: 50% 100% / 50% 50% no-repeat
+  radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: animate_span 500ms ease-in-out forwards 200ms;
+
+}  
+
+@keyframes animate_span {
+  80%{
+    letter-spacing: 9px;
+  }
+  100% {
+    background-size: 300% 300%;
+  }
 }
 
