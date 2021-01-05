@@ -23,9 +23,6 @@ a:hover{
     color: chartreuse;
 
 }
-a:active{
-    color: chartreuse;
-}
 
 .project span {
     justify-content: space-around;
@@ -61,6 +58,11 @@ a:active{
   .project span:hover {
     letter-spacing: 2px;
   }
+  
+  .project span:hover::after {
+    opacity: 0;
+    transform: scale(0.1, 1);
+  }
   .project span:hover::before {
     opacity: 1; 
     transform: scale(1, 1); 
@@ -76,17 +78,12 @@ a:active{
     transition: all 0.3s;
     background-color: rgba(255,255,255,0.1);
   }
-  .project span:hover::after {
-    opacity: 0;
-    transform: scale(0.1, 1);
-  }
+
 
 .name {
     color: white;
     text-align: center;
     font-size: 30px;
-    width: 10%;
-    border: olive dashed;
     margin-left: auto;
     margin-right: auto;
     margin-top: -2%;
@@ -97,26 +94,23 @@ a:active{
 .showDesc{
   display: inline;
 }
-.showDesc p {
+
+.showDesc p{
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  overflow: hidden;
+  display: block;
   text-align: left;
-  white-space: nowrap;
-    animation: type 4s steps(60, end);
-    position:relative;
-    content: attr(data-text);
 }
 
 .show h2 {
-  position: relative;
-  background: none;
-  letter-spacing: 4px;
-  overflow: hidden;
-  background: linear-gradient(90deg, #000, #fff, #000);
-  background-repeat: no-repeat;
+  letter-spacing: 5px;
+  background: linear-gradient(90deg,  #333, #fff, #000);
   background-size: 85%;
-  animation: animate_h2 3s linear infinite;
-  -webkit-background-clip: text;
+  animation: animate_h2 4s linear infinite;
+  background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
-  
 }
 
 
@@ -131,11 +125,9 @@ a:active{
 
 .show span{
   background: 50% 100% / 50% 50% no-repeat
-  radial-gradient(ellipse at bottom, #fff, transparent, transparent);
-  -webkit-background-clip: text;
+  radial-gradient( #fff, transparent, transparent);
   background-clip: text;
-  color: transparent;
-  animation: animate_span 500ms ease-in-out forwards 200ms;
+  animation: animate_span 500ms ease-in-out forwards;
 
 }  
 
@@ -147,4 +139,7 @@ a:active{
     background-size: 300% 300%;
   }
 }
+
+
+
 
