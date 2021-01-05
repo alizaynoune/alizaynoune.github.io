@@ -18,7 +18,7 @@ $(document).ready(function () {
                 var sp_space = line[i].split(" ")
                 var _file_name = sp_space[0].split(".")
                 var _new = `<div class=\"project\"><h2 class=\"name\">${_file_name[0]}</h2>
-            <span onclick=\"toggleDesc(this)\"class=\"_desactive\">descrition</span>
+            <span onclick=\"toggleDesc(this)\">descrition</span>
             <a class=\"link_repo\" href=\"${sp_space[1]}\">source code</a>
             <div class=\"hidenDesc\" name=\"discription/${sp_space[0]}\"></div>
             </div>`;

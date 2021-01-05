@@ -11,7 +11,7 @@ html, body {
     margin: 0;
     background-color: #333;
     color: white;
-  border: indigo dashed 3px;
+  /* border: indigo dashed 3px; */
 }
 *{
   margin: 0%;
@@ -37,7 +37,7 @@ html, body {
 }
 
 .navBar {
-  border: dashed 1px green;
+  /* border: dashed 1px green; */
   display: inline-flex;
   height: 15%;
   max-height: 150px;
@@ -53,7 +53,7 @@ html, body {
 }
 .navBar img , a{
   height: 100%;
-  border: deeppink dashed 1px;
+  /* border: deeppink dashed 1px; */
 }
 
 .navLinks {
@@ -126,23 +126,22 @@ html, body {
   transform: scale(0.1, 1);
 }
 
-.ScrollNavLinks {
+.currPage {
+  background-color:rgba(0, 0, 0, 0.5);
+}
+
+
+.ScrollBar  .navLinks {
   position:fixed;
   top: 0%;
   right: 0%;
- 
   width: 100%;
-  
   height: 40px;
   background-color: #333;
   transition: all 0.5s;
 }
 
-
-.currPage {
-  background-color:rgba(0, 0, 0, 0.5);
-}
-.ScrollNavLinks .currPage{
+.ScrollBar .navLinks .currPage{
   background-color:rgba(0, 0, 0);
 }
 
@@ -156,7 +155,7 @@ html, body {
 
 .pageContent {
   
-  border: blue 2px dashed;
+  /* border: blue 2px dashed; */
   width: 100%;
   height: auto;
   overflow: hidden;
@@ -169,12 +168,143 @@ footer {
   background: none;
 }
 
+@media only screen and (max-width: 800px){
+  .ScrollBar h1{
+    display: inline;
+    position: fixed;
+    font-size: 40px;
+    letter-spacing: 10px;
+    left: 0%;
+    width: 100%;
+    height: 60px;
+    background-color: #333;
+  }
 
+  .ScrollBar .menuBtn {
+    background-color: #333;
+    top: 2px;
+    right: 30px;
+  }
+  .navBar {
+    border: dashed 1px green;
+    display: block;
+    text-align: center;
+  }
+  
+  .navBar h1{
+    color: aqua;
+  }
 
+  .ScrollBar .navLinks{
+    width: 50%;
+    height: 80%; 
+    right: 0%;
+    top: 60px;
+    position: fixed;
+  }
+  .navLinks {
+    position: fixed;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+    height: 80%; 
+    right: 0%;
+    top : 150px;
+    transform: translateX(100%);
+    align-items: center;
+    background-color: #333;
+    transition: all 0.4s;
+    border: dashed 1px bisque;
+  }
+  
+  
+  .navLinks li {
+    list-style: none;
+    font-size: 28px;
+    font-weight:bold;
+    cursor: pointer;
+    width: 100%;
+    height: 60px;
+    color: #FFF;
+    transform: translateX(100%);
+    
+  }
 
+  .navLinks li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.5s;
+    background-color: rgba(255,255,255,0.1);
+  }
+  
+  .currPage {
+    background-color:rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    border-bottom-style: solid;
+    letter-spacing: 5px;
+    border-bottom-color: rgba(255,255,255,0.5);
 
+  }
+  
+  
+  .menuBtn{
+  
+    height: 60px;
+    width: 60px;
+    display: flex;
+    position: fixed;
+    cursor: pointer;
+    right: 5%;
+    top: 2%;
+    display: block;
+  }
+  .menuBtn div{
+      height: 9px;
+      width: 60px;
+      background-color: azure;
+      margin-top: 8px;
+      transition: all 0.5s;
+  }
 
+  .btnClose [id='line1'] {
+    transform: rotate(-45deg) translate(-15px,8px);
+    width: 70px;
+    /* background-color: aqua; */
+    
+  }
+  .btnClose [id='line2'] {
+    opacity: 0;
+    background: none;
+  }
+  .btnClose [id='line3'] {
+    transform: rotate(45deg) translate(-18px,-8px);
+    width: 70px;
+   
+  }
 
+  .toggleNavLinks{
+    transform: translateX(0%);
+    transition: all 0.5s;
+  }
+  .toggleNavLinks li{
+    transform: translateX(0%);
+    /* transform: translateY(0%); */
+  }
+
+  /* .ScrollBar {
+    position: fixed;
+  } */
+  
+  /* .pageContent { 
+    border: blue 2px dashed;
+  } */
+
+}
 
 
 
