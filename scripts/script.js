@@ -1,5 +1,7 @@
 $(document).ready(function () {
-    $('.pageContent').load('src/Home.html');
+    // $('.pageHome').load('src/Home.html');
+    // $('.pageContact').load('src/Contact.html');
+    $('.pagePoject').load('src/Projects.html');
     $('#intro').scroll(function(){
         if (($('.navBar').offset().top * -1) >= $('.navBar').height()){
            $('.navBar').addClass('ScrollBar');
@@ -18,7 +20,7 @@ function openPage(elem) {
         $(this).removeClass("currPage");
     });
     $(elem).addClass("currPage");
-    $('.namePage').html($(elem).html());
+    // $('.namePage').html($(elem).html());
 }
 
 function    clickbtn(){

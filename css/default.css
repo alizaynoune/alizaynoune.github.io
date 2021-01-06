@@ -156,6 +156,35 @@ html, body {
   height: auto;
   overflow: hidden;
 }
+.contact {
+  border: green dashed 1px;
+  width: 60px;
+  margin-top: 20px;
+}
+.contact a{
+  text-decoration: none;
+  color: aliceblue;
+}
+.fa {
+  text-align: right;
+  font-size: 30px;
+  width: 100%;
+  transform: translateX(-50%);
+  display: block;
+  padding-right: 5px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.fa:hover{
+  background-color: honeydew;
+  color: #333;
+  font-size: 40px;
+  transform: translateX(0%);
+  transition: all 0.5s;
+}
+
 footer {
   position: fixed;
   bottom: 1%;
