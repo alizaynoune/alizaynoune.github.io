@@ -11,7 +11,6 @@ html, body {
     margin: 0;
     background-color: #333;
     color: white;
-  /* border: indigo dashed 3px; */
 }
 *{
   margin: 0%;
@@ -37,7 +36,6 @@ html, body {
 }
 
 .navBar {
-  /* border: dashed 1px green; */
   display: inline-flex;
   height: 15%;
   max-height: 150px;
@@ -53,7 +51,6 @@ html, body {
 }
 .navBar img , a{
   height: 100%;
-  /* border: deeppink dashed 1px; */
 }
 
 .navLinks {
@@ -154,8 +151,7 @@ html, body {
 }
 
 .pageContent {
-  
-  /* border: blue 2px dashed; */
+  margin-top: 10px;
   width: 100%;
   height: auto;
   overflow: hidden;
@@ -186,7 +182,6 @@ footer {
     right: 30px;
   }
   .navBar {
-    border: dashed 1px green;
     display: block;
     text-align: center;
   }
@@ -214,7 +209,6 @@ footer {
     align-items: center;
     background-color: #333;
     transition: all 0.4s;
-    border: dashed 1px bisque;
   }
   
   
@@ -273,9 +267,7 @@ footer {
 
   .btnClose [id='line1'] {
     transform: rotate(-45deg) translate(-15px,8px);
-    width: 70px;
-    /* background-color: aqua; */
-    
+    width: 70px;    
   }
   .btnClose [id='line2'] {
     opacity: 0;
@@ -293,17 +285,7 @@ footer {
   }
   .toggleNavLinks li{
     transform: translateX(0%);
-    /* transform: translateY(0%); */
   }
-
-  /* .ScrollBar {
-    position: fixed;
-  } */
-  
-  /* .pageContent { 
-    border: blue 2px dashed;
-  } */
-
 }
 
 

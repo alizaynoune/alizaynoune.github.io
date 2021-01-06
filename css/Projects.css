@@ -82,7 +82,7 @@ a:hover{
   }
 }
 
-.show span{
+/* .show span{
   background: 50% 100% / 50% 50% no-repeat
   radial-gradient( #fff, transparent, transparent);
   background-clip: text;
@@ -96,7 +96,7 @@ a:hover{
   100% {
     background-size: 300% 300%;
   }
-}
+} */
 
 
 @media only screen and (max-width: 800px){
