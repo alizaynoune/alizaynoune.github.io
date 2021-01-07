@@ -152,48 +152,69 @@ html, body {
 }
 
 .pageContent {
-  margin-top: 10px;
   width: 100%;
   height: auto;
   overflow: hidden;
 }
+
+
+.pageProject, .pageContact, .pageHome {
+  padding: 10px;
+  margin-top: 100px;
+  border: deepskyblue dashed 1px;
+}
+
+.pageHome h1{
+  text-align: center;
+  letter-spacing: 3px;
+  padding-bottom: 10px;
+}
+
+.pageHome h2 {
+  text-align: center;
+  text-decoration: underline;
+}
+.pageHome p{
+  text-align: left;
+  padding: 50px;
+  /* border: deeppink dashed 1px; */
+}
+
 .contact {
-  /* text-align: center; */
-  border: green dashed 1px;
+  /* border: green dashed 1px; */
   width: 100%;
   height: 90px;
-  margin-top: 20px;
-  /* display: block; */
-  /* justify-content: space-around; */
+  /* margin-top: 100px; */
+  display: inline-flex;
 }
 .contact a{
   text-decoration: none;
   color: aliceblue;
-  /* display: none; */
-  /* height: 100%; */
-  /* border: green dashed 1px; */
+  /* border: orchid dashed 1px; */
+  height: 0%;
+  width: 0%;
+
 }
 
 .contact div{
-  display: inline;
-  text-align: center;
-  margin-top: 20px;
-  /* margin: 1%; */
-  padding-inline: 5%;
+  display: inline-block;
   /* justify-content: space-around; */
-  display: inline-flex;
+  text-align: center;
+  margin-left: 10%;
+  margin-top: 2%;
+  height: 50px;
+  width: 50px;
   /* border: brown dashed 1px; */
+  bottom: 0%;
 }
 
+
 .fa {
-  /* margin-top: 20%; */
-  /* padding-inline: 6%; */
-  text-align: center;
+  display: inline-block;
+  /* text-align: center; */
   font-size: 30px;
   height: 40px;
   width: 40px;
-  padding-top: 5px;
-  /* display: inline; */
   cursor: pointer;
   transition: all 0.5s;
   /* border: green dashed 1px; */
@@ -202,7 +223,7 @@ html, body {
 .fa:hover{
   background: linear-gradient(90deg, #333, #fff, #333);
   color: #333;
-  border-radius: 40%;
+  border-radius: 50%;
   animation: animate_contact 0.5s linear;
   background-size: 100%;
 }
@@ -234,6 +255,26 @@ html, body {
 .github :hover{color: #211f1f;}
 .imail :hover{color: #ea4335;}
 
+.contact div p{
+  display: none;
+  font-size: 20px;
+  margin-top: 20%;
+  text-align: center;
+  /* border: dodgerblue dashed 1px; */
+  margin-left: -90%;
+  font-weight: bolder;
+  /* position: absolute; */
+  /* left: 20%; */
+  /* background-color: azure; */
+}
+
+.contact div:hover [class='valueContac']{
+  display: block;
+}
+
+.contact div:hover{
+  height: 100%;
+}
 
 footer {
   position: fixed;
@@ -365,7 +406,13 @@ footer {
   .toggleNavLinks li{
     transform: translateX(0%);
   }
+  .contact div{
+    margin-left: 6%;
+  }
 }
+
+
+
 
 
 

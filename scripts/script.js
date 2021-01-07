@@ -20,18 +20,6 @@ function toggleDesc(elem) {
    $(elem).html('show description');
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 $(document).ready(function () {
     $('.pageHome').load('src/Home.html');
     $('.pageContact').load('src/Contact.html');
@@ -63,13 +51,26 @@ $(document).ready(function () {
 });
 
 
-function openPage(elem) {
-    $(".pageContent").load($(elem).attr("value"));
+function ScrollPage(elem) {
     $(".currPage").each(function () {
         $(this).removeClass("currPage");
     });
     $(elem).addClass("currPage");
-    // $('.namePage').html($(elem).html());
+
+    // console.log($($('.currPage').attr('value')).offset().top);
+    // console.log($('#intro').offset());
+    var Scroll = $($(elem).attr('value')).offset().top;
+    // $('#intro').animate({scrollTop: $($('.currPage').attr('value')).offset().top},800);
+    console.log(Math.abs(Scroll))
+    if (Math.abs(Scroll) > 50){
+        if (Scroll < 0)
+            Scroll -= 50;
+        else
+            Scroll +=50;
+        $('#intro').animate({scrollTop: Scroll});
+    }
+
+    $('.namePage').html($(elem).html());
 }
 
 function    clickbtn(){
