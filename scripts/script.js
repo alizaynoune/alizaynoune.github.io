@@ -31,6 +31,13 @@ $(document).ready(function () {
         else{ 
             $('.navBar').removeClass('ScrollBar');
         }
+            // console.log('start');
+        $('.navLinks').children().each(function(){
+            
+            // console.log(Math.ceil($($(this).attr('value')).offset().top));
+            if (Math.ceil($($(this).attr('value')).offset().top) < 100)
+                setCurrPage($(this));
+        });
     });
 
     jQuery.get("discription/info.txt", function (data) {
@@ -51,24 +58,32 @@ $(document).ready(function () {
 });
 
 
-function ScrollPage(elem) {
+function    setCurrPage(elem){
     $(".currPage").each(function () {
         $(this).removeClass("currPage");
     });
     $(elem).addClass("currPage");
+}
 
-    // console.log($($('.currPage').attr('value')).offset().top);
-    // console.log($('#intro').offset());
-    var Scroll = $($(elem).attr('value')).offset().top;
-    // $('#intro').animate({scrollTop: $($('.currPage').attr('value')).offset().top},800);
-    console.log(Math.abs(Scroll))
-    if (Math.abs(Scroll) > 50){
-        if (Scroll < 0)
-            Scroll -= 50;
-        else
-            Scroll +=50;
-        $('#intro').animate({scrollTop: Scroll});
-    }
+
+function        ScrollOffset(elem){
+    var Class = $(elem).attr('value');
+    if (Class === '.pageHome')
+        return (0);
+    if (Class === '.pageContact')
+        return (500);
+    if (Class === '.pageProject')
+        return (700);
+    // console.log(Class);
+}
+
+function ScrollPage(elem) {
+    setCurrPage(elem);
+
+    var Scroll = ScrollOffset(elem);
+    // console.log(Scroll)
+    // if (Scroll > 0)
+        $('#intro').animate({scrollTop: Scroll}, 900);
 
     $('.namePage').html($(elem).html());
 }
