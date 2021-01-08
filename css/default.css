@@ -211,11 +211,11 @@ html, body {
 
 .fa {
   display: inline-block;
-  /* text-align: center; */
   font-size: 30px;
   height: 40px;
   width: 40px;
   cursor: pointer;
+  padding-top: 6px;
   transition: all 0.5s;
   /* border: green dashed 1px; */
 }
@@ -253,19 +253,15 @@ html, body {
 .linkedin :hover{color: #0072b1;}
 .phone :hover{ color: #4fce5d;}
 .github :hover{color: #211f1f;}
-.imail :hover{color: #ea4335;}
+.email :hover{color: #ea4335;}
 
 .contact div p{
   display: none;
   font-size: 20px;
   margin-top: 20%;
   text-align: center;
-  /* border: dodgerblue dashed 1px; */
   margin-left: -90%;
   font-weight: bolder;
-  /* position: absolute; */
-  /* left: 20%; */
-  /* background-color: azure; */
 }
 
 .contact div:hover [class='valueContac']{

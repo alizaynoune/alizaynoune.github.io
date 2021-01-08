@@ -35,9 +35,9 @@ a:hover{
 }
 
 .project span:hover {
-  letter-spacing: 2px;
- 
+  letter-spacing: 2px; 
 }
+
 
 .name {
     color: white;
@@ -51,7 +51,7 @@ a:hover{
   display: none;
 }
 .showDesc{
-  display: inline;
+  display: block;
 }
 
 .showDesc p{
