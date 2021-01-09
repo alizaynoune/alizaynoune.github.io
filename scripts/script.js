@@ -31,11 +31,8 @@ $(document).ready(function () {
         else{ 
             $('.navBar').removeClass('ScrollBar');
         }
-            // console.log('start');
         $('.navLinks').children().each(function(){
-            
-            // console.log(Math.ceil($($(this).attr('value')).offset().top));
-            if (Math.ceil($($(this).attr('value')).offset().top) < 100)
+        if (Math.ceil($($(this).attr('value')).offset().top) < 100)
                 setCurrPage($(this));
         });
     });
@@ -63,6 +60,7 @@ function    setCurrPage(elem){
         $(this).removeClass("currPage");
     });
     $(elem).addClass("currPage");
+    $('.namePage').html($(elem).html());
 }
 
 
@@ -74,18 +72,14 @@ function        ScrollOffset(elem){
         return (500);
     if (Class === '.pageProject')
         return (700);
-    // console.log(Class);
 }
 
 function ScrollPage(elem) {
     setCurrPage(elem);
 
     var Scroll = ScrollOffset(elem);
-    // console.log(Scroll)
-    // if (Scroll > 0)
         $('#intro').animate({scrollTop: Scroll}, 900);
 
-    $('.namePage').html($(elem).html());
 }
 
 function    clickbtn(){

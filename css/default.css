@@ -161,7 +161,7 @@ html, body {
 .pageProject, .pageContact, .pageHome {
   padding: 10px;
   margin-top: 100px;
-  border: deepskyblue dashed 1px;
+  /* border: deepskyblue dashed 1px; */
 }
 
 .pageHome h1{
@@ -177,6 +177,7 @@ html, body {
 .pageHome p{
   text-align: left;
   padding: 50px;
+  line-height: 20px;
   /* border: deeppink dashed 1px; */
 }
 
@@ -215,7 +216,7 @@ html, body {
   height: 40px;
   width: 40px;
   cursor: pointer;
-  padding-top: 6px;
+  padding-top: 4px;
   transition: all 0.5s;
   /* border: green dashed 1px; */
 }
@@ -247,6 +248,13 @@ html, body {
     background-size: 100%;
   }
 }
+
+.facebook   .fa {background-color: #3d5998; border-radius: 50%;}
+.twitter    .fa {background-color: #1da1f2; border-radius: 50%;}
+.linkedin   .fa {background-color: #0072b1; border-radius: 50%;}
+.phone      .fa {background-color: #4fce5d; border-radius: 50%;}
+.github     .fa {background-color: #211f1f; border-radius: 50%;}
+.email      .fa {background-color: #ea4335; border-radius: 50%;}
 
 .facebook :hover{color: #3d5998;}
 .twitter :hover {color: #1da1f2;}
@@ -405,10 +413,5 @@ footer {
   .contact div{
     margin-left: 6%;
   }
+
 }
-
-
-
-
-
-
