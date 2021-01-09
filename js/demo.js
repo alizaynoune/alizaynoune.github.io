@@ -5,8 +5,8 @@
 
 document.addEventListener('DOMContentLoaded', function () {
   particleground(document.getElementById('particles'), {
-    dotColor: '#5cbdaa',
-    lineColor: '#5cbdaa'
+    dotColor:  '#012F36 ',
+    lineColor: '#012F36 '
   });
   var intro = document.getElementById('intro');
 }, false);
